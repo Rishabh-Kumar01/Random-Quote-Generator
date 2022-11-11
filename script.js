@@ -1,4 +1,4 @@
-var quotes = [
+let quotes = [
 	{
 	quote: "Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind.",
 	source: "Dr. Seuss"
@@ -160,3 +160,11 @@ var quotes = [
 	source: "Aristotle"
 	}
 ];
+
+
+function getRandomQuote() {
+    let randomNumber = Math.floor(Math.random() * quotes.length)
+    let randomQuote = quotes[randomNumber]
+    return randomQuote
+}
+
