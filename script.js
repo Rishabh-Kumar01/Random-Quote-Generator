@@ -168,3 +168,23 @@ function getRandomQuote() {
     return randomQuote
 }
 
+function getRandomColor() {
+    let red = Math.floor(Math.random() * 256)
+    let green = Math.floor(Math.random() * 256)
+    let blue = Math.floor(Math.random() * 256)
+    let randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')'
+    return randomColor
+}
+
+function printQuote() {
+    let quotes = getRandomQuote()
+    let quoteContainer = document.getElementById('quote-box')
+    let quoteString = `<p class="quote">${quotes.quote}</p>< class="source">${quotes.source}`
+    if(quotes.citation) {quoteString += `<span class="citation">${quotes.citation}</span>`}
+    if(quotes.year) {quoteString += `<span class="year">${quotes.year}</span>`}
+    else {quoteString += `</p>`}
+    quoteContainer.innerHTML = quoteString
+    document.body.style.backgroundColor = getRandomColor()
+}
+
+document.getElementById('loadQuote').addEventListener('click', printQuote)
