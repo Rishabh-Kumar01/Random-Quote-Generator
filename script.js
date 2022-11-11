@@ -188,3 +188,5 @@ function printQuote() {
 }
 
 document.getElementById('loadQuote').addEventListener('click', printQuote)
+
+// Everything working fine
