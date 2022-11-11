@@ -179,7 +179,7 @@ function getRandomColor() {
 function printQuote() {
     let quotes = getRandomQuote()
     let quoteContainer = document.getElementById('quote-box')
-    let quoteString = `<p class="quote">${quotes.quote}</p>< class="source">${quotes.source}`
+    let quoteString = `<p class="quote">${quotes.quote}</p><p class="source">${quotes.source}`
     if(quotes.citation) {quoteString += `<span class="citation">${quotes.citation}</span>`}
     if(quotes.year) {quoteString += `<span class="year">${quotes.year}</span>`}
     else {quoteString += `</p>`}
